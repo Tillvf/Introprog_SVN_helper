@@ -41,14 +41,18 @@ def create_dir_file(file,path_in,path_out):
 
 
 
-path_in = os.environ['HOME'] + "/Documents/uni/Introprog/introprog-wise1718/Aufgaben/"
-path_out = os.environ['HOME'] + "/Documents/uni/Introprog/introprog-wise1718/Tutorien/t29/Gruppen/g01/Arbeitsverzeichnis/"
-
+path_in    = os.environ['HOME'] + "/Documents/uni/Introprog/introprog-wise1718/Aufgaben/"
+path_out   = os.environ['HOME'] + "/Documents/uni/Introprog/introprog-wise1718/Tutorien/t29/Gruppen/g01/Arbeitsverzeichnis/"
+path_out_2 = os.environ['HOME'] + "/Documents/uni/Introprog/introprog-wise1718/Tutorien/t29/Gruppen/g01/Abgaben/"
 
 for filename in os.listdir(path_in):
+	path_tmp   = path_in+filename+"/"
 	if filename not in os.listdir(path_out) and "Blatt" in filename:
-		path_tmp = path_in+filename+"/"
 		create_dir_file(filename,path_tmp,path_out)
+	if filename not in os.listdir(path_out_2) and "Blatt" in filename:
+		create_dir_file(filename,path_tmp,path_out_2)
+
+
 		
 
 
