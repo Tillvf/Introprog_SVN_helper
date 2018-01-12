@@ -43,6 +43,7 @@ def create_dir_file(file,path_in,path_out):
 #Hier muss der Pfad des Introprog SVN verzeichnisses angegeben werden
 #(ausgehend vom Home verzeichnis)
 #funktioniert nur auf UNIX Systemen 
+#Beispielpfad: /Documents/uni/Introprog/
 
 
 path_SVN = "/Documents/uni/Introprog/"
