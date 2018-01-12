@@ -23,7 +23,7 @@ def create_dir_file(file,path_in,path_out):
 
 	
 	for filename in os.listdir(path_in):
-		if filename != "Vorgaben"	:
+		if filename != "Vorgaben" and filename != "vorgaben"	:
 			shutil.copyfile(path_in+filename,path_out+filename)
 	
 	path_in = path_in + Vorgaben
@@ -40,10 +40,16 @@ def create_dir_file(file,path_in,path_out):
 
 
 
+#Hier muss der Pfad des Introprog SVN verzeichnisses angegeben werden
+#(ausgehend vom Home verzeichnis)
+#funktioniert nur auf UNIX Systemen 
 
-path_in    = os.environ['HOME'] + "/Documents/uni/Introprog/introprog-wise1718/Aufgaben/"
-path_out   = os.environ['HOME'] + "/Documents/uni/Introprog/introprog-wise1718/Tutorien/t29/Gruppen/g01/Arbeitsverzeichnis/"
-path_out_2 = os.environ['HOME'] + "/Documents/uni/Introprog/introprog-wise1718/Tutorien/t29/Gruppen/g01/Abgaben/"
+
+path_SVN = "/Documents/uni/Introprog/"
+
+path_in    = os.environ['HOME'] + path_SVN + "introprog-wise1718/Aufgaben/"
+path_out   = os.environ['HOME'] + path_SVN + "introprog-wise1718/Tutorien/t29/Gruppen/g01/Arbeitsverzeichnis/"
+path_out_2 = os.environ['HOME'] + path_SVN + "introprog-wise1718/Tutorien/t29/Gruppen/g01/Abgaben/"
 
 for filename in os.listdir(path_in):
 	path_tmp   = path_in+filename+"/"
