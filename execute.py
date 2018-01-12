@@ -9,4 +9,3 @@ for filename in os.listdir(path_in):
 		command = "python3 rename.py "+filename
 		os.system(command)
 
-#os.system("python3 rename.py 04")
